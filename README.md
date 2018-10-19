@@ -1,7 +1,21 @@
 # Clustering Convolutional Kernels to Compress Deep Neural Networks
+This repository is an official PyTorch implementation of the Paper **"Clustering Convolutional Kernels to Compress Deep Neural Networks"** from **ECCV 2018 (poster)**.
+
 ![](/figs/main.png)
 
-This repository is an official PyTorch implementation of the Paper **"Clustering Convolutional Kernels to Compress Deep Neural Networks"** from **ECCV 2018 (poster)**.
+* **Note: We use the term 'kernels' to refer spatial convolutional kernels in CNNs which usually have 3x3 elements.**
+
+Our method can compress 1.2M 3x3 kernels of [ResNet-18](https://arxiv.org/pdf/1512.03385.pdf) into 64 representative centroids.
+The compressed model achieves **11.33% (+0.43%)** Top-1 error on ImageNet classification task.
+
+You can see how those centroids look like:
+
+![](/figs/resnet18-c64.png)
+
+The most common centroid, which replaces **over 60k kernels**, appear at the top left.
+The least frequent one, which replaces about **5k kernels**, appear at bottom right.
+
+## Reference
 If you find our work useful in your research of publication, please cite our work:
 
 [1] Sanghyun Son, Seungjun Nah, Kyoung Mu Lee, **"Clustering Convolutional Kernels to Compress Deep Neural Networks,"** In ECCV 2018.
