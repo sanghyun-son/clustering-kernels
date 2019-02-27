@@ -66,7 +66,7 @@ If you would like to do some experiments about ImageNet classification, follow [
 Your dataset directory should be like below:
 ```bash
 [some_path]/ILSVRC2012/train/[1000_many_folders]
-[some_path]/ILSVRC2012/va/[1000_many_folders]
+[some_path]/ILSVRC2012/val/[1000_many_folders]
 ```
 Then, you have to specify the directory with ``--dir_data [some_path]``.
 It is also possible to fix a default argument in ``options.py`` directly.
